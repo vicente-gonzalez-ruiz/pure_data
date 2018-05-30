@@ -1,0 +1,9 @@
+#N canvas 452 608 412 77 10;
+#X obj 82 11 adc~;
+#X obj 83 40 dac~;
+#X text 8 25 Left channel;
+#X text 112 26 Right channel;
+#X text 114 11 Read audio from the Analog-to-Digital Converter;
+#X text 114 40 Write audio to the Digital-to-Analog Converter;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;

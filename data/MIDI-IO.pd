@@ -1,0 +1,11 @@
+#N canvas 962 48 956 1131 10;
+#X obj 33 23 notein;
+#X obj 27 107 noteout;
+#X text 72 85 <- MIDI channel number;
+#X text 37 51 <------- Note number;
+#X text 54 68 <---- Velocity;
+#X text 82 23 Read note;
+#X text 81 107 Write note;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 0 2 1 2;

@@ -1,0 +1,22 @@
+#N canvas 462 314 173 208 10;
+#X obj 57 45 cursor;
+#X obj 57 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 57 66 route motion;
+#X obj 57 88 route x y;
+#X floatatom 41 116 5 0 0 0 - - -;
+#X floatatom 95 115 5 0 0 0 - - -;
+#X obj 57 142 osc~;
+#X obj 89 142 osc~;
+#X obj 67 169 dac~;
+#X text 74 114 x;
+#X text 130 112 y;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 1;
