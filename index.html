@@ -1,0 +1,1272 @@
+<!DOCTYPE html> 
+<html> 
+<head> <title>Pure Data</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="index.css" /> 
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead"><a 
+href="http://puredata.info/" >Pure Data</a></h2>
+ <div class="author" ><span 
+class="ecrm-1200">Vicente Gonz</span><span 
+class="ecrm-1200">á</span><span 
+class="ecrm-1200">lez Ruiz</span></div><br />
+<div class="date" ><span 
+class="ecrm-1200">May 30, 2018</span></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">About Pure Data</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">Installation (of Pure Data Extended)</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-4">How to run Pd</a></span>
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-50004" id="QQ2-1-5">On-line documentation</a></span>
+<br />   <span class="sectionToc" >5 <a 
+href="#x1-60005" id="QQ2-1-6">Pd in-place documentation</a></span>
+<br />   <span class="sectionToc" >6 <a 
+href="#x1-70006" id="QQ2-1-7">I want even more (external) libraries!</a></span>
+<br />   <span class="sectionToc" >7 <a 
+href="#x1-80007" id="QQ2-1-8">Patches, objects, wires, ...</a></span>
+<br />   <span class="sectionToc" >8 <a 
+href="#x1-90008" id="QQ2-1-9">(Some of the) Supported Inputs/Outputs</a></span>
+<br />   <span class="sectionToc" >9 <a 
+href="#x1-100009" id="QQ2-1-10">A MIDI music random generator</a></span>
+<br />   <span class="sectionToc" >10 <a 
+href="#x1-1100010" id="QQ2-1-11">An amplitude (audio) modulator</a></span>
+   </div>
+<!--l. 9--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>About Pure Data</h3>
+     <ul class="itemize1">
+     <li class="itemize">Pure  Data  (Pd)  is  a  interactive  real-time  graphical  programming
+     environment for audio, video, and graphical processing.
+     </li>
+     <li class="itemize">Pd was originally created by <a 
+href="http://msp.ucsd.edu/" >Miller Puckette</a> at <a 
+href="http://www.ircam.fr/" >IRCAM</a>.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">It is written in <a 
+href="http://en.wikipedia.org/wiki/C_%28programming_language%29" >C</a> and <a 
+href="http://en.wikipedia.org/wiki/Tcl" >Tcl</a>.
+     </li>
+     <li class="itemize">Pd is <a 
+href="http://puredata.info/about/pdlicense" >open source</a> and runs on Linux, Windows, Mac Os X and Android.</li></ul>
+<!--l. 26--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>Installation (of Pure Data Extended)</h3>
+     <ul class="itemize1">
+     <li class="itemize"><a 
+href="http://puredata.info/downloads/pd-extended" >Pure Data Extended</a> is an extension (with libraries written by the community
+     for graphics rendering (GEM library), OSC communications, binary ﬁle
+     processing, audio-visual streaming, physical modeling, sensor-based
+     performances, etc.) of <a 
+href="http://puredata.info/downloads/pure-data" >Pure Data Vanilla</a>.
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-3002x1"><a 
+href="http://puredata.info/docs/faq/macosx" >MacOS X</a>.
+         </li>
+         <li 
+  class="enumerate" id="x1-3004x2"><a 
+href="http://puredata.info/docs/faq/debian" >Debian(s)</a>.
+         </li>
+         <li 
+  class="enumerate" id="x1-3006x3"><a 
+href="http://puredata.info/docs/faq/redhat" >RedHat</a>.
+         </li>
+         <li 
+  class="enumerate" id="x1-3008x4"><a 
+href="http://puredata.info/docs/faq/w32" >Windows</a>.</li></ol>
+     </li></ul>
+<!--l. 46--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-40003"></a>How to run Pd</h3>
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-1">
+pd-extended &#x0026;
+</div>
+<!--l. 51--><p class="nopar" >
+</p><!--l. 55--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-50004"></a>On-line documentation</h3>
+     <ul class="itemize1">
+     <li class="itemize"><a 
+href="http://puredata.info/docs" >Main Pd documentation</a>.
+     </li>
+     <li class="itemize"><a 
+href="http://en.flossmanuals.net/PureData/" >Floss Manuals</a></li></ul>
+<!--l. 65--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-60005"></a>Pd in-place documentation</h3>
+     <ul class="itemize1">
+     <li class="itemize"><span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">Pd-extended-&#x003E;Help-&#x003E;Help</span><span 
+class="ectt-1000"> Browser</span></span></span>.
+     </li>
+     <li class="itemize"><span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">Pd-extended-&#x003E;Search</span></span></span>.
+     </li>
+     <li class="itemize">On any object of the canvas, click the righ button of your mouse and select
+     “Help” to get information about that object.</li></ul>
+<!--l. 77--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-70006"></a>I want even more (external) libraries!</h3>
+<!--l. 80--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-7002x1"><a 
+href="http://puredata.info/downloads/by-category/library" >Projects In Category Libraries And Externals</a>.
+     </li>
+     <li 
+  class="enumerate" id="x1-7004x2"><a 
+href="http://puredata.info/community/member-downloads/patches" >Pd Patches</a>.</li></ol>
+                                                                  
+
+                                                                  
+<!--l. 91--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
+ id="x1-80007"></a><a 
+href="http://puredata.info/docs/developer/PdFileFormat" >Patches, objects, wires, ...</a></h3>
+<!--l. 94--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-8002x1">A <span 
+class="ecbx-1000">patch </span>is a collection of Pd <span 
+class="ecbx-1000">elements </span>(usually stored in a <span 
+class="ectt-1000">.pd </span>ﬁle).
+     </li>
+     <li 
+  class="enumerate" id="x1-8004x2">Elements of a patch are <span 
+class="ecbx-1000">objects </span>that have been already placed in a patch
+     (at least have size and position in the <span 
+class="ecbx-1000">canvas</span>).
+     </li>
+     <li 
+  class="enumerate" id="x1-8006x3"><span 
+class="ecbx-1000">Wires </span>transport <span 
+class="ecbx-1000">messages </span>between objects.</li></ol>
+<!--l. 105--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
+ id="x1-90008"></a>(Some of the) Supported Inputs/Outputs</h3>
+<!--l. 108--><p class="noindent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-9002x1"><a 
+href="http://en.flossmanuals.net/pure-data/ch079_audio-glue/" >PCM audio</a>.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-2">
+     cat &#x003E; ADC-DAC.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 596 824 450 300 10;
+      <br />#X obj 117 84 adc~;
+      <br />#X obj 118 113 dac~;
+      <br />#X text 43 98 Left channel;
+      <br />#X text 147 99 Right channel;
+      <br />#X text 149 84 Read audio from the Analog-to-Digital Converter;
+      <br />#X text 149 113 Write audio to the Digital-to-Analog Converter;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 1 1 1;
+      <br />EOF
+      <br />
+      <br />pd-extended ADC-DAC.pd &#x0026;
+      <br />
+      <br /># Remember to activate DSP in the Pd main window!
+</div>
+     <!--l. 126--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 128--><p class="noindent" >
+
+</p><!--l. 129--><p class="noindent" ><img 
+src="data/ADC-DAC.png" alt="PIC"  
+ /> <img 
+src="data/ADC-DAC-pd.png" alt="PIC"  
+ /> <img 
+src="data/ADC-DAC-alsamixer.png" alt="PIC"  
+ /> <img 
+src="data/ADC-DAC-jack-Audio.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li 
+  class="enumerate" id="x1-9004x2"><a 
+href="http://en.flossmanuals.net/pure-data/midi/using-midi/" >MIDI</a>. Run <span 
+class="ectt-1000">qjacktcl</span>, <span 
+class="ectt-1000">vmpk</span>, <span 
+class="ectt-1000">amsynth </span>and connect in the ALSA Connections
+     facility “VMPK Output” with “Pure Data” and“Pure Data” with “amSynth”.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-3">
+     cat &#x003E; MIDI-IO.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 962 48 956 1131 10;
+      <br />#X obj 33 23 notein;
+      <br />#X obj 27 107 noteout;
+      <br />#X text 72 85 &#x003C;- MIDI channel number;
+      <br />#X text 37 51 &#x003C;------- Note number;
+      <br />#X text 54 68 &#x003C;---- Velocity;
+      <br />#X text 82 23 Read note;
+      <br />#X text 81 107 Write note;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 1 1 1;
+      <br />#X connect 0 2 1 2;
+      <br />EOF
+      <br />
+      <br />pd-extended MIDI-IO.pd &#x0026;
+      <br />
+      <br />% Remember to select &#x0022;jack&#x0022; and &#x0022;ALSA-MIDI&#x0022; in Pd!
+</div>
+     <!--l. 158--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 160--><p class="noindent" >
+
+</p><!--l. 161--><p class="noindent" ><img 
+src="data/VMPK.png" alt="PIC"  
+ /> <img 
+src="data/AMSynth.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-IO.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-IO-jack-Audio.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-IO-jack-MIDI.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-IO-jack-ALSA.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li 
+  class="enumerate" id="x1-9006x3"><a 
+href="http://en.flossmanuals.net/pure-data/ch049_moving-images/" >Video</a>.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-4">
+     cat &#x003E; webcam.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 92 850 450 300 10;
+      <br />#X obj 117 91 gemhead;
+      <br />#X msg 149 117 device 0;
+      <br />#X obj 124 147 pix_video;
+      <br />#X obj 230 157 gemwin;
+      <br />#X obj 124 169 pix_texture;
+      <br />#X obj 124 191 rectangle 6 4;
+      <br />#X msg 231 134 dimen 640 480 \, create \, 1;
+      <br />#X connect 0 0 2 0;
+      <br />#X connect 1 0 2 0;
+      <br />#X connect 2 0 4 0;
+      <br />#X connect 4 0 5 0;
+      <br />#X connect 6 0 3 0;
+      <br />EOF
+      <br />
+      <br />pd-extended webcam.pd &#x0026;
+      <br />
+      <br />% A window named GEN should be created with the video captured by the webcam.
+</div>
+     <!--l. 190--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 192--><p class="noindent" >
+
+</p><!--l. 193--><p class="noindent" ><img 
+src="data/webcam.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li 
+  class="enumerate" id="x1-9008x4"><a 
+href="http://en.flossmanuals.net/pure-data/ch056_game-controllers/" >Keyboard</a>.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-5">
+     cat &#x003E; keyboard.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 80 659 450 300 10;
+      <br />#X obj 59 28 key;
+      <br />#X floatatom 59 51 5 0 0 0 - - -;
+      <br />#X connect 0 0 1 0;
+      <br />EOF
+      <br />
+      <br />pd-extended keyboard.pd &#x0026;
+      <br />
+      <br />% After selecting the window, push any key.
+</div>
+     <!--l. 208--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 210--><p class="noindent" >
+
+</p><!--l. 211--><p class="noindent" ><img 
+src="data/keyboard.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li 
+  class="enumerate" id="x1-9010x5"><a 
+href="http://en.flossmanuals.net/pure-data/ch056_game-controllers/" >Mouse</a>.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-6">
+     cat &#x003E; mouse.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 82 473 450 300 10;
+      <br />#X obj 135 72 cursor;
+      <br />#X obj 135 54 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X obj 135 93 route motion;
+      <br />#X obj 135 115 route x y;
+      <br />#X floatatom 119 143 5 0 0 0 - - -;
+      <br />#X floatatom 173 142 5 0 0 0 - - -;
+      <br />#X obj 135 169 osc~;
+      <br />#X obj 167 169 osc~;
+      <br />#X obj 145 196 dac~;
+      <br />#X text 152 141 x;
+      <br />#X text 208 139 y;
+      <br />#X connect 0 0 2 0;
+      <br />#X connect 1 0 0 0;
+      <br />#X connect 2 0 3 0;
+      <br />#X connect 3 0 4 0;
+      <br />#X connect 3 1 5 0;
+      <br />#X connect 4 0 6 0;
+      <br />#X connect 5 0 7 0;
+      <br />#X connect 6 0 8 0;
+      <br />#X connect 7 0 8 1;
+      <br />EOF
+      <br />
+      <br />pd-extended mouse.pd &#x0026;
+      <br />
+      <br /># Activate the patch and the DSP, and move the mouse!
+</div>
+     <!--l. 244--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 246--><p class="noindent" >
+
+</p><!--l. 247--><p class="noindent" ><img 
+src="data/mouse.png" alt="PIC"  
+ /> <img 
+src="data/mouse-pd.png" alt="PIC"  
+ /> <img 
+src="data/mouse-jack.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li 
+  class="enumerate" id="x1-9012x6"><a 
+href="http://en.flossmanuals.net/pure-data/ch056_game-controllers/" >USB HID</a>.
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-7">
+     # Before running pd, plug the device!
+      <br />
+      <br />cat &#x003E; hid.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 1396 119 176 115 10;
+      <br />#X msg 90 15 print;
+      <br />#X obj 51 43 hid;
+      <br />#X obj 51 72 print;
+      <br />#X obj 19 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+      <br />;
+      <br />#X msg 40 15 open 8;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 1 0 2 0;
+      <br />#X connect 3 0 1 0;
+      <br />#X connect 4 0 1 0;
+      <br />EOF
+      <br />
+      <br />pd-extended hid.pd &#x0026;
+      <br />
+      <br /># Don&#x2019;t forget to: (1)  toggle on the patch, (2) send the &#x0022;print&#x0022; message
+      <br /># to the &#x0022;hid&#x0022; object, (3) send the right &#x0022;open&#x0022; to the right device.
+</div>
+     <!--l. 275--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 277--><p class="noindent" >
+
+</p><!--l. 278--><p class="noindent" ><img 
+src="data/hid.png" alt="PIC"  
+ /> <img 
+src="data/hid-pd.png" alt="PIC"  
+ /></p></div>
+     </li></ol>
+<!--l. 286--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">9   </span> <a 
+ id="x1-100009"></a>A MIDI music random generator</h3>
+                                                                  
+
+                                                                  
+   <div class="verbatim" id="verbatim-8">
+cat &#x003E; MIDI-random-generator.pd &#x003C;&#x003C; EOF
+ <br />#N canvas 2 48 476 1131 10;
+ <br />#X obj 35 114 drunk 10;
+ <br />#X floatatom 35 169 5 0 0 0 - - -;
+ <br />#X obj 35 35 metro 300;
+ <br />#X obj 35 12 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+ <br />;
+ <br />#X floatatom 57 63 5 0 0 0 - - -;
+ <br />#X floatatom 80 87 5 0 0 0 - - -;
+ <br />#X floatatom 86 15 5 0 0 0 - - -;
+ <br />#X obj 35 140 + 21;
+ <br />#X text 114 84 Step size;
+ <br />#X text 90 61 Upper bound;
+ <br />#X obj 38 191 hsl 128 15 21 108 0 0 empty empty empty -2 -8 0 10 -262144
+ <br />-1 -1 2628 1;
+ <br />#X obj 377 42 ctlout 1;
+ <br />#X floatatom 377 17 0 0 0 0 - - -;
+ <br />#X obj 35 254 makenote;
+ <br />#X floatatom 57 215 5 0 0 0 - - -;
+ <br />#X floatatom 80 234 5 0 0 0 - - -;
+ <br />#X obj 118 293 noteout 1;
+ <br />#X obj 187 116 drunk 10;
+ <br />#X floatatom 187 171 5 0 0 0 - - -;
+ <br />#X obj 187 37 metro 300;
+ <br />#X obj 187 14 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+ <br />;
+ <br />#X floatatom 209 65 5 0 0 0 - - -;
+ <br />#X floatatom 232 89 5 0 0 0 - - -;
+ <br />#X floatatom 238 17 5 0 0 0 - - -;
+ <br />#X obj 187 142 + 21;
+ <br />#X text 266 86 Step size;
+ <br />#X text 242 63 Upper bound;
+ <br />#X obj 190 193 hsl 128 15 21 108 0 0 empty empty empty -2 -8 0 10 -262144
+ <br />-1 -1 292 1;
+ <br />#X obj 187 256 makenote;
+ <br />#X floatatom 209 217 5 0 0 0 - - -;
+ <br />#X floatatom 232 236 5 0 0 0 - - -;
+ <br />#X text 122 16 Period;
+ <br />#X text 273 18 Period;
+ <br />#X text 218 141 MIDI notes start at 21;
+ <br />#X text 242 218 Velocity;
+ <br />#X text 266 237 Duration (ms);
+                                                                  
+
+                                                                  
+ <br />#X connect 0 0 7 0;
+ <br />#X connect 1 0 10 0;
+ <br />#X connect 2 0 0 0;
+ <br />#X connect 3 0 2 0;
+ <br />#X connect 4 0 0 1;
+ <br />#X connect 5 0 0 2;
+ <br />#X connect 6 0 2 1;
+ <br />#X connect 7 0 1 0;
+ <br />#X connect 10 0 13 0;
+ <br />#X connect 12 0 11 0;
+ <br />#X connect 13 0 16 0;
+ <br />#X connect 13 1 16 1;
+ <br />#X connect 14 0 13 1;
+ <br />#X connect 15 0 13 2;
+ <br />#X connect 17 0 24 0;
+ <br />#X connect 18 0 27 0;
+ <br />#X connect 19 0 17 0;
+ <br />#X connect 20 0 19 0;
+ <br />#X connect 21 0 17 1;
+ <br />#X connect 22 0 17 2;
+ <br />#X connect 23 0 19 1;
+ <br />#X connect 24 0 18 0;
+ <br />#X connect 27 0 28 0;
+ <br />#X connect 28 0 16 0;
+ <br />#X connect 28 1 16 1;
+ <br />#X connect 29 0 28 1;
+ <br />#X connect 30 0 28 2;
+ <br />EOF
+ <br />
+ <br />pd-extended MIDI-random-generator.pd &#x0026;
+ <br />
+ <br /># Ensure that &#x0022;jack&#x0022; and &#x0022;ALSA-MIDI&#x0022; have been selected in the &#x0022;Media&#x0022; menu.
+</div>
+<!--l. 374--><p class="nopar" >
+</p>
+<div class="center" 
+>
+<!--l. 376--><p class="noindent" >
+
+</p><!--l. 377--><p class="noindent" ><img 
+src="data/MIDI-random-generator.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-random-generator-amsynth.png" alt="PIC"  
+ /> <img 
+src="data/MIDI-random-generator-jack-ALSA.png" alt="PIC"  
+ /></p></div>
+<!--l. 384--><p class="noindent" >
+</p>
+                                                                  
+
+                                                                  
+   <h3 class="sectionHead"><span class="titlemark">10   </span> <a 
+ id="x1-1100010"></a>An amplitude (audio) modulator</h3>
+     <ul class="itemize1">
+     <li class="itemize">Version 1:
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-9">
+     cat &#x003E; amplitude-modulation-1.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 907 133 949 688 10;
+      <br />#X obj 96 53 adc~;
+      <br />#X obj 347 149 *~;
+      <br />#X obj 379 148 *~;
+      <br />#X obj 365 196 dac~;
+      <br />#X obj 369 85 osc~;
+      <br />#X obj 80 156 env~;
+      <br />#X obj 129 156 env~;
+      <br />#X obj 81 219 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 130 218 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 129 194 - 100;
+      <br />#X obj 80 195 - 100;
+      <br />#X obj 26 -65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X msg 26 -45 \; pd dsp \$1;
+      <br />#X obj 225 400 tabwrite~ R-wave;
+      <br />#X obj 22 401 tabwrite~ L-wave;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-wave 100 float 3;
+      <br />#A 0 7.15256e-07 -2.38419e-07 3.8147e-06 -8.34465e-07 3.57628e-06 1.43051e-06
+      <br />-2.26498e-06 2.86102e-06 -1.90735e-06 -2.86102e-06 1.19209e-07 -4.76837e-07
+      <br />-4.29153e-06 8.34465e-07 1.19209e-06 -5.96047e-07 2.14577e-06 -1.66893e-06
+      <br />4.76837e-07 5.84126e-06 -2.02656e-06 -2.74181e-06 3.21865e-06 -1.07288e-06
+      <br />3.57628e-06 2.02656e-06 -3.69549e-06 -1.19209e-07 -5.96047e-07 -1.78814e-06
+      <br />-1.07288e-06 -9.53674e-07 -4.17233e-06 -7.39098e-06 -1.54972e-06 -3.33786e-06
+      <br />-2.38419e-07 -6.07967e-06 -3.45707e-06 -1.19209e-07 -2.6226e-06 -1.66893e-06
+      <br />-3.57628e-07 9.53674e-07 0 -2.5034e-06 -3.09944e-06 -7.15256e-07 -4.29153e-06
+      <br />-6.67572e-06 3.45707e-06 -8.34465e-07 -2.38419e-06 -2.02656e-06 -3.45707e-06
+      <br />-5.96047e-07 -1.19209e-06 -2.38419e-07 -9.53674e-07 -9.53674e-07 -9.53674e-07
+      <br />-1.19209e-07 5.96047e-07 -2.74181e-06 -5.96047e-07 -3.45707e-06 -4.76837e-06
+      <br />-2.5034e-06 -6.07967e-06 -1.01328e-05 -5.96047e-06 -6.31809e-06 -5.72205e-06
+      <br />-5.126e-06 -1.00136e-05 -8.22544e-06 -6.67572e-06 -9.05991e-06 -6.79493e-06
+      <br />-5.84126e-06 -7.15256e-06 -8.34465e-06 -3.33786e-06 -4.41074e-06 -3.33786e-06
+      <br />-6.55651e-06 -4.52995e-06 3.21865e-06 -5.00679e-06 -4.41074e-06 -1.78814e-06
+      <br />-2.98023e-06 -3.21865e-06 -5.96047e-06 -2.5034e-06 2.26498e-06 -1.78814e-06
+      <br />-7.98702e-06 -7.15256e-07 -1.54972e-06;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 22 437 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-wave 100 float 3;
+      <br />#A 0 -2.38419e-07 -1.54972e-06 2.74181e-06 2.38419e-07 5.96047e-07
+                                                                  
+
+                                                                  
+      <br />-2.02656e-06 -3.21865e-06 -2.14577e-06 -2.5034e-06 -3.93391e-06 -3.93391e-06
+      <br />1.90735e-06 -3.45707e-06 -5.126e-06 -1.07288e-06 -5.96047e-07 0 -2.5034e-06
+      <br />-2.6226e-06 2.74181e-06 2.6226e-06 -5.24521e-06 -3.57628e-07 3.57628e-06
+      <br />-5.96047e-07 5.96047e-07 4.76837e-07 -2.02656e-06 5.96047e-07 -4.64916e-06
+      <br />-2.6226e-06 -3.45707e-06 -4.52995e-06 -5.84126e-06 -4.88758e-06 -6.55651e-06
+      <br />-2.5034e-06 -6.31809e-06 -5.84126e-06 -1.43051e-06 -5.96047e-06 -5.36442e-06
+      <br />-5.00679e-06 -4.88758e-06 -3.45707e-06 -7.6294e-06 -6.19888e-06 -4.64916e-06
+      <br />-4.41074e-06 -2.98023e-06 -3.45707e-06 -1.54972e-06 -5.60284e-06 -8.34465e-07
+      <br />-1.43051e-06 3.33786e-06 -3.57628e-07 -4.88758e-06 1.43051e-06 2.14577e-06
+      <br />-4.76837e-07 -1.3113e-06 4.17233e-06 1.19209e-06 -1.78814e-06 -2.74181e-06
+      <br />-6.79493e-06 -1.3113e-06 -3.21865e-06 -9.29833e-06 8.34465e-07 -4.76837e-06
+      <br />-9.05991e-06 -8.22544e-06 -6.91414e-06 -2.38419e-06 -5.48363e-06 -9.41753e-06
+      <br />-7.03335e-06 -4.76837e-06 -3.33786e-06 -5.48363e-06 -5.84126e-06 -6.31809e-06
+      <br />-2.86102e-06 -7.6294e-06 -3.8147e-06 -2.5034e-06 -4.64916e-06 3.57628e-07
+      <br />-1.07288e-06 -2.02656e-06 -4.52995e-06 -1.90735e-06 -1.07288e-06 -1.90735e-06
+      <br />-1.3113e-06 -5.84126e-06 1.43051e-06 3.33786e-06;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 225 437 graph;
+      <br />#X obj 348 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X obj 535 -1 rfft~;
+      <br />#X obj 525 27 *~;
+      <br />#X obj 567 26 *~;
+      <br />#X obj 537 63 sqrt~;
+      <br />#X obj 522 101 tabwrite~ L-spectrum;
+      <br />#X obj 736 -2 rfft~;
+      <br />#X obj 726 26 *~;
+      <br />#X obj 768 25 *~;
+      <br />#X obj 738 62 sqrt~;
+      <br />#X obj 725 100 tabwrite~ R-spectrum;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum 32 float 5;
+      <br />#A 0 5.71013e-05 4.32817e-05 1.20384e-05 3.48559e-05 8.77849e-06 2.19825e-05
+      <br />4.74943e-06 1.30174e-05 1.16016e-05 1.52102e-05 1.47943e-05 6.02108e-06
+      <br />2.82748e-05 8.00954e-06 1.33847e-05 1.26131e-05 2.90345e-05 1.71747e-05
+      <br />1.99527e-05 8.0148e-06 5.46966e-06 2.88755e-05 3.64437e-05 3.49496e-05
+      <br />1.23923e-05 1.35475e-05 1.38634e-05 1.89308e-05 2.77127e-05 7.08749e-06
+      <br />1.0293e-05 4.91514e-06;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 522 137 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum 32 float 5;
+      <br />#A 0 0.000133872 6.65336e-05 6.16975e-05 2.6333e-05 9.60711e-06 1.8283e-05
+      <br />1.49031e-06 2.69171e-06 3.37218e-06 1.02522e-05 1.5449e-05 1.41368e-05
+      <br />3.5513e-06 1.65844e-05 1.12967e-06 2.44163e-05 4.74706e-05 4.18902e-06
+      <br />2.01457e-05 1.39197e-05 1.69537e-05 1.80982e-05 1.03847e-05 3.24139e-05
+                                                                  
+
+                                                                  
+      <br />1.43496e-05 7.90919e-06 1.31608e-05 1.36888e-05 1.7326e-05 1.23782e-05
+      <br />1.87602e-05 7.10071e-06;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 725 137 graph;
+      <br />#X obj 535 304 rfft~;
+      <br />#X obj 525 332 *~;
+      <br />#X obj 567 331 *~;
+      <br />#X obj 537 368 sqrt~;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum-m 32 float 1;
+      <br />#A 0 2.25592e-05 1.70995e-05 4.75608e-06 1.37706e-05 3.46815e-06 8.6847e-06
+      <br />1.87638e-06 5.14285e-06 4.58351e-06 6.00916e-06 5.84484e-06 2.37877e-06
+      <br />1.11706e-05 3.16436e-06 5.28796e-06 4.9831e-06 1.14708e-05 6.78528e-06
+      <br />7.88281e-06 3.16644e-06 2.16092e-06 1.1408e-05 1.4398e-05 1.38077e-05
+      <br />4.89589e-06 5.35226e-06 5.47708e-06 7.47908e-06 1.09486e-05 2.80008e-06
+      <br />4.06649e-06 1.94185e-06;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 522 437 graph;
+      <br />#X obj 736 304 rfft~;
+      <br />#X obj 726 332 *~;
+      <br />#X obj 768 331 *~;
+      <br />#X obj 738 368 sqrt~;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum-m 32 float 5;
+      <br />#A 0 5.28894e-05 2.62857e-05 2.43751e-05 1.04035e-05 3.79552e-06 7.22315e-06
+      <br />5.88781e-07 1.06343e-06 1.33226e-06 4.05036e-06 6.1035e-06 5.58508e-06
+      <br />1.40303e-06 6.55207e-06 4.46304e-07 9.64624e-06 1.87544e-05 1.65497e-06
+      <br />7.95906e-06 5.49931e-06 6.69795e-06 7.15012e-06 4.10274e-06 1.28059e-05
+      <br />5.66917e-06 3.12472e-06 5.19951e-06 5.40808e-06 6.84504e-06 4.89032e-06
+      <br />7.41166e-06 2.80531e-06;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 725 437 graph;
+      <br />#X obj 522 400 tabwrite~ L-spectrum-m;
+      <br />#X obj 725 400 tabwrite~ R-spectrum-m;
+      <br />#X text 443 -18 Carrier frequency;
+      <br />#X floatatom 89 176 5 0 0 0 - - -;
+      <br />#X floatatom 137 176 5 0 0 0 - - -;
+      <br />#X obj 358 264 metro 10;
+      <br />#X floatatom 386 41 5 0 0 0 - - -;
+      <br />#X msg 369 -70 1000;
+      <br />#X obj 203 301 *~;
+      <br />#X obj 242 301 *~;
+      <br />#X obj 369 -39 knob 64 64 0 22050 0 0 empty empty empty 0 -8 0 8 -260097
+      <br />-1 -1 0 1;
+      <br />#X text 103 32 comment;
+      <br />#X connect 0 0 1 0;
+                                                                  
+
+                                                                  
+      <br />#X connect 0 0 5 0;
+      <br />#X connect 0 0 14 0;
+      <br />#X connect 0 0 18 0;
+      <br />#X connect 0 1 2 0;
+      <br />#X connect 0 1 6 0;
+      <br />#X connect 0 1 13 0;
+      <br />#X connect 0 1 23 0;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 1 0 30 0;
+      <br />#X connect 2 0 3 1;
+      <br />#X connect 2 0 35 0;
+      <br />#X connect 4 0 1 1;
+      <br />#X connect 4 0 2 1;
+      <br />#X connect 5 0 10 0;
+      <br />#X connect 5 0 43 0;
+      <br />#X connect 6 0 9 0;
+      <br />#X connect 6 0 44 0;
+      <br />#X connect 9 0 8 0;
+      <br />#X connect 10 0 7 0;
+      <br />#X connect 11 0 12 0;
+      <br />#X connect 17 0 45 0;
+      <br />#X connect 18 0 19 0;
+      <br />#X connect 18 0 19 1;
+      <br />#X connect 18 1 20 0;
+      <br />#X connect 18 1 20 1;
+      <br />#X connect 19 0 21 0;
+      <br />#X connect 20 0 21 0;
+      <br />#X connect 21 0 22 0;
+      <br />#X connect 23 0 24 0;
+      <br />#X connect 23 0 24 1;
+      <br />#X connect 23 1 25 0;
+      <br />#X connect 23 1 25 1;
+      <br />#X connect 24 0 26 0;
+      <br />#X connect 25 0 26 0;
+      <br />#X connect 26 0 27 0;
+      <br />#X connect 30 0 31 0;
+      <br />#X connect 30 0 31 1;
+      <br />#X connect 30 1 32 0;
+      <br />#X connect 30 1 32 1;
+      <br />#X connect 31 0 33 0;
+      <br />#X connect 32 0 33 0;
+      <br />#X connect 33 0 40 0;
+      <br />#X connect 35 0 36 0;
+      <br />#X connect 35 0 36 1;
+      <br />#X connect 35 1 37 0;
+      <br />#X connect 35 1 37 1;
+                                                                  
+
+                                                                  
+      <br />#X connect 36 0 38 0;
+      <br />#X connect 37 0 38 0;
+      <br />#X connect 38 0 41 0;
+      <br />#X connect 45 0 14 0;
+      <br />#X connect 45 0 13 0;
+      <br />#X connect 45 0 22 0;
+      <br />#X connect 45 0 27 0;
+      <br />#X connect 45 0 40 0;
+      <br />#X connect 45 0 41 0;
+      <br />#X connect 47 0 50 0;
+      <br />#X connect 50 0 46 0;
+      <br />#X connect 50 0 4 0;
+      <br />EOF
+      <br />
+      <br />pd-extended amplitude-modulation-1.pd &#x0026;
+</div>
+     <!--l. 583--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 585--><p class="noindent" >
+
+</p><!--l. 586--><p class="noindent" ><img 
+src="data/amplitude-modulation-1.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li class="itemize">Version 2 (using sends and receives):
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-10">
+     cat &#x003E; amplitude-modulation-2.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 617 127 1154 962 10;
+      <br />#X obj 94 -240 adc~;
+      <br />#X obj 828 46 *~;
+      <br />#X obj 860 45 *~;
+      <br />#X obj 846 93 dac~;
+      <br />#X obj 850 -18 osc~;
+      <br />#X obj 78 -137 env~;
+      <br />#X obj 127 -137 env~;
+      <br />#X obj 79 -74 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 128 -75 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 127 -99 - 100;
+      <br />#X obj 78 -98 - 100;
+      <br />#X obj 15 -353 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X msg 15 -333 \; pd dsp \$1;
+      <br />#X obj 223 107 tabwrite~ R-wave;
+      <br />#X obj 20 108 tabwrite~ L-wave;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-wave 100 float 3;
+      <br />#A 0 -5.96047e-07 -0.000107408 0.000123501 0.000132918 2.80142e-05
+      <br />0.000281692 2.40803e-05 -0.000208616 -0.000202775 0.000151992 0.000205398
+      <br />-0.000183702 -0.000294328 4.8995e-05 -0.000420213 -6.19888e-06 -0.000101566
+      <br />-0.000219822 -0.000320792 -0.000690699 -0.000278592 -0.000164032 0.000139236
+      <br />-0.000349045 -0.000146866 3.82662e-05 -5.13792e-05 8.97646e-05 -0.000333786
+      <br />-0.000366092 -0.000171423 -0.000333548 -9.88245e-05 -0.000293374 -0.000428677
+      <br />-0.000506759 -0.000342608 -0.000474215 -0.000311971 -0.000304222 -0.000426173
+      <br />-0.000111461 -0.000185728 -0.00029254 -0.000502229 -0.000620365 -0.000219703
+      <br />-0.000557303 -0.0008775 -0.00060463 -0.000949621 -0.000714779 -0.000823379
+      <br />-0.000718236 -0.000561714 -0.000801921 -0.000694871 -0.000490665 -0.000412345
+      <br />-0.000799418 -0.000520706 -0.000224948 -0.000247836 -0.000737906 -0.000796914
+      <br />-0.000888229 -0.0010711 -0.00100029 -0.000889421 -0.000692725 -0.000931025
+      <br />-0.00108337 -0.000770331 -0.000556469 -0.000853896 -0.00103295 -0.00110519
+      <br />-0.00112593 -0.000694513 -0.000778318 -0.000909686 -0.00111175 -0.00128877
+      <br />-0.000876546 -0.00068748 -0.00105345 -0.00111425 -0.00140011 -0.000926733
+      <br />-0.000594616 -0.000602126 -0.00111318 -0.000897288 -0.000674009 -0.000750065
+      <br />-0.000349402 -0.000814676 -0.000812531 -0.000852466 -0.000762582;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 20 144 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-wave 100 float 3;
+      <br />#A 0 -6.98567e-05 -0.000249147 5.80549e-05 -0.000182271 -0.000317693
+                                                                  
+
+                                                                  
+      <br />0.000222206 -2.96831e-05 -0.000311971 -0.000132561 4.48227e-05 0.000132561
+      <br />-8.58307e-06 -0.00042057 -0.000250697 0.000125051 4.11272e-05 -5.04255e-05
+      <br />-0.000157237 -0.000450969 -0.000454664 -0.000431657 0.000100613 -0.000128269
+      <br />-0.000412464 -0.000261664 -1.56164e-05 0.000194192 0.000140786 -0.000353217
+      <br />-0.000131965 0.00017333 -0.000229239 -4.41074e-05 -0.000206232 -0.000459909
+      <br />-0.000434995 -0.000143051 -0.000127792 -0.000171542 -0.000579715 -0.000150442
+      <br />-8.54731e-05 -7.21216e-05 -0.000386834 -0.000581265 -0.000254989 -0.000529647
+      <br />-0.000409365 -0.000453115 -0.000855446 -0.000799894 -0.000755787 -0.000645042
+      <br />-0.000667691 -0.000463486 -0.000617862 -0.000640631 -0.000308633 -0.000333309
+      <br />-0.000792861 -0.000680208 -0.00023365 -0.000472069 -0.00037849 -0.00088191
+      <br />-0.000935078 -0.000614405 -0.000995755 -0.000690341 -0.000495672 -0.00072062
+      <br />-0.000949264 -0.000870824 -0.000456691 -0.000563383 -0.00102675 -0.00109518
+      <br />-0.00101292 -0.000409961 -0.00080657 -0.0013442 -0.0010426 -0.00112629
+      <br />-0.000958085 -0.000831962 -0.00118279 -0.000812411 -0.00130808 -0.00120866
+      <br />-0.000943184 -0.000874281 -0.00117743 -0.00117898 -0.000871658 -0.000306845
+      <br />-0.000781655 -0.000844479 -0.000691652 -0.0009166 -0.00090301;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 223 144 graph;
+      <br />#X obj 96 -355 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X obj 253 -242 rfft~;
+      <br />#X obj 243 -214 *~;
+      <br />#X obj 285 -215 *~;
+      <br />#X obj 255 -178 sqrt~;
+      <br />#X obj 268 -130 tabwrite~ L-spectrum;
+      <br />#X obj 459 -244 rfft~;
+      <br />#X obj 449 -216 *~;
+      <br />#X obj 491 -217 *~;
+      <br />#X obj 461 -180 sqrt~;
+      <br />#X obj 471 -131 tabwrite~ R-spectrum;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum 32 float 5;
+      <br />#A 0 0.0195442 0.00817593 0.00548782 0.00352542 0.00197952 0.00165914
+      <br />0.00166075 0.000954338 0.000817258 0.00129113 0.00146072 0.00152881
+      <br />0.00223816 0.00185242 0.000388151 0.00104445 0.00300843 0.00192705
+      <br />0.000826185 0.000547419 0.00112846 0.00174496 0.000760889 0.00149756
+      <br />0.000968246 0.00195259 0.00193626 0.00175719 0.000575282 0.00155285
+      <br />0.0016394 8.09608e-05;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 268 -94 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum 32 float 5;
+      <br />#A 0 0.0175533 0.00722562 0.0045235 0.00142838 0.00211134 0.00221599
+      <br />0.00101493 0.000579066 0.00151707 0.00053408 0.00106531 0.000938519
+      <br />0.00432546 0.0020301 0.000585151 0.00112467 0.00336951 0.000863056
+      <br />0.00111727 0.00113411 0.000592928 0.00251454 0.000653159 0.00161542
+                                                                  
+
+                                                                  
+      <br />0.00213387 0.000865938 0.000550404 0.00127678 0.000472236 0.000717838
+      <br />0.000716469 0.000725959;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 471 -94 graph;
+      <br />#X obj 481 84 rfft~;
+      <br />#X obj 471 112 *~;
+      <br />#X obj 513 111 *~;
+      <br />#X obj 483 148 sqrt~;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum-modulated 32 float 1;
+      <br />#A 0 0.00219504 0.0014184 0.00105871 0.000580603 0.00125773 0.00191861
+      <br />0.000814898 0.00082533 0.00120923 0.0014777 0.00152529 0.00349748 0.00994944
+      <br />0.00619251 0.00415783 0.000557319 0.00113695 0.00142816 0.00142593
+      <br />0.000593171 0.000601995 0.000850319 0.00057299 0.000580439 0.000891542
+      <br />0.00045952 0.00108085 0.00173529 0.00133119 0.000930282 0.0009818 0.000841899
+      <br />;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 483 236 graph;
+      <br />#X obj 683 85 rfft~;
+      <br />#X obj 673 113 *~;
+      <br />#X obj 715 112 *~;
+      <br />#X obj 685 149 sqrt~;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum-modulated 32 float 5;
+      <br />#A 0 0.00406177 0.00131448 0.0006774 0.000166896 0.00128597 0.000777438
+      <br />0.00146135 0.000787831 0.00172884 0.00152404 0.00187414 0.00332734
+      <br />0.00814396 0.00398155 0.00276644 0.00115745 0.000941153 0.00100096
+      <br />0.000736268 0.000316533 0.000800675 0.000380299 0.000580029 0.000898021
+      <br />0.00193061 0.00194364 0.000532415 0.0006216 0.00186499 0.000261477
+      <br />0.000675644 0.000803884;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 686 236 graph;
+      <br />#X text 863 -45 Carrier frequency;
+      <br />#X floatatom 87 -117 5 0 0 0 - - -;
+      <br />#X floatatom 135 -117 5 0 0 0 - - -;
+      <br />#X floatatom 867 -62 5 0 0 0 - - -;
+      <br />#X msg 850 -173 1000;
+      <br />#X obj 850 -142 knob 64 64 0 22050 0 0 empty empty empty 0 -8 0 8 -260097
+      <br />-1 -1 2400 1;
+      <br />#X text 101 -261 comment;
+      <br />#X obj 33 -215 s~ L-channel;
+      <br />#X obj 21 62 r~ L-channel;
+      <br />#X obj 30 -165 r~ L-channel;
+      <br />#X obj 774 18 r~ L-channel;
+      <br />#X obj 253 -290 r~ L-channel;
+      <br />#X obj 117 -216 s~ R-channel;
+                                                                  
+
+                                                                  
+      <br />#X obj 127 -165 r~ R-channel;
+      <br />#X obj 224 62 r~ R-channel;
+      <br />#X obj 860 18 r~ R-channel;
+      <br />#X obj 459 -292 r~ R-channel;
+      <br />#X obj 106 -304 s metro;
+      <br />#X obj 35 86 r metro;
+      <br />#X obj 236 84 r metro;
+      <br />#X obj 496 173 r metro;
+      <br />#X obj 699 172 r metro;
+      <br />#X obj 283 -155 r metro;
+      <br />#X obj 488 -155 r metro;
+      <br />#X obj 483 199 tabwrite~ L-spectrum-modulated;
+      <br />#X obj 686 200 tabwrite~ R-spectrum-modulated;
+      <br />#X obj 106 -334 metro 50;
+      <br />#X connect 0 0 47 0;
+      <br />#X connect 0 1 52 0;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 1 0 30 0;
+      <br />#X connect 2 0 3 1;
+      <br />#X connect 2 0 35 0;
+      <br />#X connect 4 0 1 1;
+      <br />#X connect 4 0 2 1;
+      <br />#X connect 5 0 10 0;
+      <br />#X connect 5 0 41 0;
+      <br />#X connect 6 0 9 0;
+      <br />#X connect 6 0 42 0;
+      <br />#X connect 9 0 8 0;
+      <br />#X connect 10 0 7 0;
+      <br />#X connect 11 0 12 0;
+      <br />#X connect 17 0 66 0;
+      <br />#X connect 18 0 19 0;
+      <br />#X connect 18 0 19 1;
+      <br />#X connect 18 1 20 0;
+      <br />#X connect 18 1 20 1;
+      <br />#X connect 19 0 21 0;
+      <br />#X connect 20 0 21 0;
+      <br />#X connect 21 0 22 0;
+      <br />#X connect 23 0 24 0;
+      <br />#X connect 23 0 24 1;
+      <br />#X connect 23 1 25 0;
+      <br />#X connect 23 1 25 1;
+      <br />#X connect 24 0 26 0;
+      <br />#X connect 25 0 26 0;
+      <br />#X connect 26 0 27 0;
+      <br />#X connect 30 0 31 0;
+      <br />#X connect 30 0 31 1;
+                                                                  
+
+                                                                  
+      <br />#X connect 30 1 32 0;
+      <br />#X connect 30 1 32 1;
+      <br />#X connect 31 0 33 0;
+      <br />#X connect 32 0 33 0;
+      <br />#X connect 33 0 64 0;
+      <br />#X connect 35 0 36 0;
+      <br />#X connect 35 0 36 1;
+      <br />#X connect 35 1 37 0;
+      <br />#X connect 35 1 37 1;
+      <br />#X connect 36 0 38 0;
+      <br />#X connect 37 0 38 0;
+      <br />#X connect 38 0 65 0;
+      <br />#X connect 44 0 45 0;
+      <br />#X connect 45 0 43 0;
+      <br />#X connect 45 0 4 0;
+      <br />#X connect 48 0 14 0;
+      <br />#X connect 49 0 5 0;
+      <br />#X connect 50 0 1 0;
+      <br />#X connect 51 0 18 0;
+      <br />#X connect 53 0 6 0;
+      <br />#X connect 54 0 13 0;
+      <br />#X connect 55 0 2 0;
+      <br />#X connect 56 0 23 0;
+      <br />#X connect 58 0 14 0;
+      <br />#X connect 59 0 13 0;
+      <br />#X connect 60 0 64 0;
+      <br />#X connect 61 0 65 0;
+      <br />#X connect 62 0 22 0;
+      <br />#X connect 63 0 27 0;
+      <br />#X connect 66 0 57 0;
+      <br />EOF
+      <br />
+      <br />pd-extended amplitude-modulation-2.pd &#x0026;
+</div>
+     <!--l. 805--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 807--><p class="noindent" >
+
+</p><!--l. 808--><p class="noindent" ><img 
+src="data/amplitude-modulation-2.png" alt="PIC"  
+ /></p></div>
+     </li>
+     <li class="itemize">Version 3 (using subpatching):
+                                                                  
+
+                                                                  
+     <div class="verbatim" id="verbatim-11">
+     cat &#x003E; amplitude-modulation-3.pd &#x003C;&#x003C; EOF
+      <br />#N canvas 615 81 1154 962 10;
+      <br />#X obj 94 -240 adc~;
+      <br />#X obj 663 17 *~;
+      <br />#X obj 695 16 *~;
+      <br />#X obj 681 64 dac~;
+      <br />#X obj 685 -47 osc~;
+      <br />#X obj 78 -137 env~;
+      <br />#X obj 127 -137 env~;
+      <br />#X obj 79 -74 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 128 -75 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+      <br />#X obj 127 -99 - 100;
+      <br />#X obj 78 -98 - 100;
+      <br />#X obj 15 -353 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+      <br />1;
+      <br />#X msg 15 -333 \; pd dsp \$1;
+      <br />#X obj 223 107 tabwrite~ R-wave;
+      <br />#X obj 20 108 tabwrite~ L-wave;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-wave 100 float 3;
+      <br />#A 0 -0.000231385 -0.000319004 -0.000555515 -0.000437021 9.13143e-05
+      <br />-0.000187159 -0.000225186 0.000345111 0.000179052 0.000228643 1.88351e-05
+      <br />2.07424e-05 0.000108361 0.000291467 0.00050509 0.000445843 0.000516295
+      <br />6.91414e-06 0.000363588 0.000561833 0.000721932 0.000422239 -6.42538e-05
+      <br />0.0001266 0.000448823 -0.000100613 -0.000260711 -0.000201583 -0.000144362
+      <br />-0.000462771 -0.000640035 -0.000618935 -0.000422359 -0.000273466 -0.000565171
+      <br />-0.000524998 -0.000305533 -0.000240564 -0.000421763 -0.0006181 -0.000558853
+      <br />-0.000553012 -0.000856161 -0.000363827 -7.76053e-05 -0.000295043 -0.000331163
+      <br />-0.000188112 -0.000537038 -0.000523567 -0.000597835 -0.000456572 -0.000149369
+      <br />-0.000326753 -0.000404835 -0.000282645 -0.000320673 -0.000473261 -0.000627637
+      <br />-0.000270844 -0.00035274 -0.000459433 -0.000648141 -0.000508785 -0.000312209
+      <br />-0.000733614 -0.00112832 -0.000754237 -0.000633836 -0.000402927 -0.000477195
+      <br />-0.000286341 -3.25441e-05 -0.000591397 -0.000722885 -0.000430942 -0.000270605
+      <br />-0.000486016 -0.000867367 -0.000529528 -0.000460744 -0.000212669 -0.000370979
+      <br />-7.71284e-05 -0.000185847 -0.000315547 -0.000399351 -0.000282884 -0.000130296
+      <br />-0.000160694 -0.000126362 -0.000187397 -0.000194907 -0.000206351 -0.000347376
+      <br />-0.000263453 -0.000251889 -0.000423551 -0.000200272 -0.0001086;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 20 144 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-wave 100 float 3;
+      <br />#A 0 -0.000347495 -0.000257731 -0.000621915 -0.000511169 -0.000177264
+                                                                  
+
+                                                                  
+      <br />1.5378e-05 -0.000175357 2.31266e-05 0.000253916 3.93391e-06 -0.000175357
+      <br />-0.000104785 9.17912e-05 9.35793e-05 0.000173688 0.000171781 0.00012207
+      <br />7.05719e-05 0.000125885 0.000366211 0.000633121 0.000400305 0.000220895
+      <br />0.000173211 0.000182629 -0.000137806 -0.000282764 -0.000282645 4.1604e-05
+      <br />-0.000465751 -0.000608683 -0.000276685 -0.000501633 -0.000305057 -0.000524283
+      <br />-0.000535607 -0.000266552 -0.000337124 -0.000260711 -0.000733614 -0.000472188
+      <br />-0.000416756 -0.000403285 -0.000616789 -0.000431657 -0.000170231 -0.000349522
+      <br />-0.000404716 -0.000227213 -0.000438929 -0.000633359 -0.000495911 -0.000291705
+      <br />-0.000327826 -0.000295281 -0.000650048 -0.000363708 -0.000493407 -0.000575304
+      <br />-0.00049305 -0.000479579 -0.000506163 -0.000704408 -0.000416279 -0.000376105
+      <br />-0.000580072 -0.000822187 -0.000572205 -0.000402212 -0.000453711 -0.000445962
+      <br />-0.000209332 0.000116944 -0.000111938 -0.000464797 -0.000228167 -0.000336885
+      <br />-0.000430226 -0.000548363 -0.000546336 -7.31945e-05 -0.000294447 -0.000248551
+      <br />5.66244e-05 -6.73533e-05 -4.82798e-05 -0.000261903 -3.09944e-05 -3.29018e-05
+      <br />-0.000303745 -0.000162482 -0.000450492 3.02792e-05 -5.96047e-06 -0.000240564
+      <br />-0.000219584 -0.000253797 -0.000185132 -9.34601e-05 -0.000490189;
+      <br />#X coords 0 1 99 -1 200 140 1;
+      <br />#X restore 223 144 graph;
+      <br />#X obj 96 -355 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+      <br />1;
+      <br />#X obj 230 -230 tabwrite~ L-spectrum;
+      <br />#X obj 433 -231 tabwrite~ R-spectrum;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum 32 float 5;
+      <br />#A 0 0.0125817 0.0119714 0.00736391 0.00111757 0.00196076 0.00186084
+      <br />0.0013529 0.00224929 0.00196935 0.00071846 0.00244962 0.00155824 0.000662175
+      <br />0.00177553 0.00236652 0.000900354 0.00428685 0.000434677 0.000374034
+      <br />0.00149237 0.0011689 0.00123219 0.00129497 0.00147874 0.000555072 0.000538826
+      <br />0.000652727 0.0014933 0.000841224 0.000361149 0.000638969 0.000947994
+      <br />;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 230 -194 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum 32 float 5;
+      <br />#A 0 0.0153836 0.0101812 0.00577934 0.00131737 0.00251711 0.00203522
+      <br />0.000315623 0.000782838 0.0020434 0.00115641 0.00174393 0.000882506
+      <br />0.00112287 0.00081443 0.00163909 0.00085469 0.00323237 0.00155087 0.000695748
+      <br />0.00141265 0.000520526 0.000459498 0.00106057 0.0007225 0.00044635
+      <br />0.00115913 0.000707579 0.000920909 0.00158063 0.000408492 0.00078321
+      <br />0.000716307;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 433 -194 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array L-spectrum-modulated 32 float 1;
+      <br />#A 0 3.8041e-05 0.000547192 0.00144994 0.00184407 0.00167551 0.000692077
+      <br />0.00495094 0.00609223 0.00668787 0.00649782 0.00334426 0.00102872 0.000526081
+                                                                  
+
+                                                                  
+      <br />0.00110091 0.000947837 0.00199104 0.0011231 0.000622475 0.0011442 0.000491187
+      <br />0.000480391 0.000943874 0.000999426 0.000845963 0.0022002 0.000669971
+      <br />0.000138072 0.000740563 0.000995444 0.00125778 0.00049642 0.000679238
+      <br />;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 563 151 graph;
+      <br />#N canvas 0 0 450 300 (subpatch) 0;
+      <br />#X array R-spectrum-modulated 32 float 5;
+      <br />#A 0 0.000303777 0.000405776 0.000995049 0.00182215 0.00128789 0.000617809
+      <br />0.00377505 0.00532228 0.00842025 0.00604103 0.00210529 0.000622102
+      <br />0.000779807 0.00106154 0.000941176 0.000386193 0.00121827 0.0011692
+      <br />0.000695059 0.000889522 0.00129267 0.00046022 0.000629959 0.000784604
+      <br />0.00179483 0.000420999 0.000870367 0.0004628 0.00134199 0.000437177
+      <br />0.000869802 0.000735404;
+      <br />#X coords 0 1 31 -1 200 140 1;
+      <br />#X restore 766 151 graph;
+      <br />#X text 698 -74 Carrier frequency;
+      <br />#X floatatom 87 -117 5 0 0 0 - - -;
+      <br />#X floatatom 135 -117 5 0 0 0 - - -;
+      <br />#X floatatom 702 -91 5 0 0 0 - - -;
+      <br />#X msg 685 -202 1000;
+      <br />#X obj 685 -171 knob 64 64 0 22050 0 0 empty empty empty 0 -8 0 8 -260097
+      <br />-1 -1 1600 1;
+      <br />#X text 101 -261 comment;
+      <br />#X obj 33 -215 s~ L-channel;
+      <br />#X obj 21 62 r~ L-channel;
+      <br />#X obj 30 -165 r~ L-channel;
+      <br />#X obj 609 -11 r~ L-channel;
+      <br />#X obj 229 -301 r~ L-channel;
+      <br />#X obj 117 -216 s~ R-channel;
+      <br />#X obj 127 -165 r~ R-channel;
+      <br />#X obj 224 62 r~ R-channel;
+      <br />#X obj 695 -11 r~ R-channel;
+      <br />#X obj 432 -304 r~ R-channel;
+      <br />#X obj 106 -304 s metro;
+      <br />#X obj 35 86 r metro;
+      <br />#X obj 236 84 r metro;
+      <br />#X obj 576 88 r metro;
+      <br />#X obj 779 87 r metro;
+      <br />#X obj 245 -255 r metro;
+      <br />#X obj 450 -255 r metro;
+      <br />#X obj 563 114 tabwrite~ L-spectrum-modulated;
+      <br />#X obj 766 115 tabwrite~ R-spectrum-modulated;
+      <br />#X obj 106 -334 metro 50;
+      <br />#N canvas 320 744 316 392 spectrum 0;
+      <br />#X obj 57 71 rfft~;
+                                                                  
+
+                                                                  
+      <br />#X obj 47 99 *~;
+      <br />#X obj 89 98 *~;
+      <br />#X obj 59 135 sqrt~;
+      <br />#X obj 59 168 outlet~;
+      <br />#X obj 57 39 inlet~;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 0 1 1;
+      <br />#X connect 0 1 2 0;
+      <br />#X connect 0 1 2 1;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 2 0 3 0;
+      <br />#X connect 3 0 4 0;
+      <br />#X connect 5 0 0 0;
+      <br />#X restore 229 -276 pd spectrum;
+      <br />#N canvas 320 744 316 392 spectrum 0;
+      <br />#X obj 57 71 rfft~;
+      <br />#X obj 47 99 *~;
+      <br />#X obj 89 98 *~;
+      <br />#X obj 59 135 sqrt~;
+      <br />#X obj 59 168 outlet~;
+      <br />#X obj 57 39 inlet~;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 0 1 1;
+      <br />#X connect 0 1 2 0;
+      <br />#X connect 0 1 2 1;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 2 0 3 0;
+      <br />#X connect 3 0 4 0;
+      <br />#X connect 5 0 0 0;
+      <br />#X restore 432 -280 pd spectrum;
+      <br />#N canvas 320 744 316 392 spectrum 0;
+      <br />#X obj 57 71 rfft~;
+      <br />#X obj 47 99 *~;
+      <br />#X obj 89 98 *~;
+      <br />#X obj 59 135 sqrt~;
+      <br />#X obj 59 168 outlet~;
+      <br />#X obj 57 39 inlet~;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 0 1 1;
+      <br />#X connect 0 1 2 0;
+      <br />#X connect 0 1 2 1;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 2 0 3 0;
+      <br />#X connect 3 0 4 0;
+      <br />#X connect 5 0 0 0;
+      <br />#X restore 563 60 pd spectrum;
+                                                                  
+
+                                                                  
+      <br />#N canvas 320 744 316 392 spectrum 0;
+      <br />#X obj 57 71 rfft~;
+      <br />#X obj 47 99 *~;
+      <br />#X obj 89 98 *~;
+      <br />#X obj 59 135 sqrt~;
+      <br />#X obj 59 168 outlet~;
+      <br />#X obj 57 39 inlet~;
+      <br />#X connect 0 0 1 0;
+      <br />#X connect 0 0 1 1;
+      <br />#X connect 0 1 2 0;
+      <br />#X connect 0 1 2 1;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 2 0 3 0;
+      <br />#X connect 3 0 4 0;
+      <br />#X connect 5 0 0 0;
+      <br />#X restore 766 62 pd spectrum;
+      <br />#X connect 0 0 31 0;
+      <br />#X connect 0 1 36 0;
+      <br />#X connect 1 0 3 0;
+      <br />#X connect 1 0 53 0;
+      <br />#X connect 2 0 3 1;
+      <br />#X connect 2 0 54 0;
+      <br />#X connect 4 0 1 1;
+      <br />#X connect 4 0 2 1;
+      <br />#X connect 5 0 10 0;
+      <br />#X connect 5 0 25 0;
+      <br />#X connect 6 0 9 0;
+      <br />#X connect 6 0 26 0;
+      <br />#X connect 9 0 8 0;
+      <br />#X connect 10 0 7 0;
+      <br />#X connect 11 0 12 0;
+      <br />#X connect 17 0 50 0;
+      <br />#X connect 28 0 29 0;
+      <br />#X connect 29 0 27 0;
+      <br />#X connect 29 0 4 0;
+      <br />#X connect 32 0 14 0;
+      <br />#X connect 33 0 5 0;
+      <br />#X connect 34 0 1 0;
+      <br />#X connect 35 0 51 0;
+      <br />#X connect 37 0 6 0;
+      <br />#X connect 38 0 13 0;
+      <br />#X connect 39 0 2 0;
+      <br />#X connect 40 0 52 0;
+      <br />#X connect 42 0 14 0;
+      <br />#X connect 43 0 13 0;
+      <br />#X connect 44 0 48 0;
+                                                                  
+
+                                                                  
+      <br />#X connect 45 0 49 0;
+      <br />#X connect 46 0 18 0;
+      <br />#X connect 47 0 19 0;
+      <br />#X connect 50 0 41 0;
+      <br />#X connect 51 0 18 0;
+      <br />#X connect 52 0 19 0;
+      <br />#X connect 53 0 48 0;
+      <br />#X connect 54 0 49 0;
+      <br />EOF
+      <br />
+      <br />pd-extended amplitude-modulation-3.pd &#x0026;
+</div>
+     <!--l. 1051--><p class="nopar" >
+</p>
+     <div class="center" 
+>
+<!--l. 1053--><p class="noindent" >
+
+</p><!--l. 1054--><p class="noindent" ><img 
+src="data/amplitude-modulation-3.png" alt="PIC"  
+ /></p></div>
+     </li></ul>
+    
+</body> 
+</html>
+                                                                  
+
+
